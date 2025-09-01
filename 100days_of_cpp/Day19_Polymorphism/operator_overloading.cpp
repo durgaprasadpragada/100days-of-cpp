@@ -15,13 +15,13 @@ public:
     Complex operator+(Complex const &obj)
     {
         Complex result;
-        result.real = real + obj.real;
-        result.imag = imag + obj.imag;
+        result.real = real + obj.real;  // add real parts
+        result.imag = imag + obj.imag;   // add imaginary parts
         return result;
     }
     void display()
     {
-        cout << real << " + " << imag << "i" << endl;
+        cout << real << " + " << imag << "i" << endl; //This calls operator+()
     }
 };
 
@@ -31,4 +31,5 @@ int main()
     Complex c3 = c1 + c2;
     c3.display();
     return 0;
+
 }
